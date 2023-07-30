@@ -1,0 +1,596 @@
+/* Обнуление */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/* ::-ms-clear - Это Специфический псевдоэлемент который повзоялет убрать крестик в поле input который автоматический добавляется в браузере Interne Explorer */
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ::-moz-focus-inner - Убирает лишние отступы и пробелы в кнопках в браузерах Firefox */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ------------------------------------ */
+
+// colors
+@color-white: #fff;
+@color-gray: #88888D;
+// font-size
+@fz-default: 14px;
+@fz-middle: 24px;
+
+body {
+  background: #12121C;
+  font-family: 'Sora', sans-serif;
+  font-size: @fz-default;
+  font-weight: 400;
+  color: @color-white;
+}
+
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Sora', sans-serif;
+.header {
+  padding: 26px 0 18px 0;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @color-white;
+    font-size: 27px;
+  }
+
+  &__svg {}
+
+  &__menu {
+    display: flex;
+    font-size: @fz-default;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px 0 0;
+  }
+
+  &__item {
+    margin: 0 40px 0 0;
+  }
+
+  &__item:last-child {
+    margin: 0;
+  }
+
+  &__link {
+    color: @color-gray;
+
+    &_active {
+      color: @color-white;
+    }
+  }
+}
+
+.header-wrap-button {
+  background: #222233;
+  // text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  height: 48px;
+
+  &__link {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: @color-white;
+  }
+}
+
+.hire {
+  margin: 120px 0 140px 0;
+}
+
+section {
+  margin: 120px 0;
+}
+
+.container {}
+
+.hire-wrap {}
+
+.body {
+  margin: 0 0 76px 0;
+
+  &__title {
+    width: 903px;
+    height: 86px;
+
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+
+    &_color {
+      color: @color-gray;
+    }
+
+    &_dot {
+      color: #57EFB4;
+    }
+  }
+
+  &__texts {
+    margin: 16px 0 32px 0;
+  }
+
+  &__text {
+    color: @color-gray;
+    font-size: @fz-middle;
+  }
+
+  &__button {
+    display: inline-block;
+    background: #006ADA;
+    border-radius: 8px;
+    padding: 14px 24px;
+  }
+
+  &__link {
+    color: @color-white;
+    text-transform: capitalize;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  column-gap: 35px;
+
+  &__column {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  &__column:hover {
+    transition: background-color .5s linear;
+    background-color: #222233;
+
+    .rows__svg rect {
+      transition: fill .3s linear;
+      fill: #57EFB4;
+
+      +path {
+        fill: #000;
+      }
+    }
+
+    .rows__title,
+    .rows__text {
+      color: #fff;
+    }
+  }
+
+  &__body {}
+
+  &__icon {}
+
+  &__svg {}
+
+  &__title {
+    font-size: @fz-middle;
+    line-height: 1.33em;
+    padding: 24px 0 16px 0;
+  }
+
+  &__text {
+    color: @color-gray;
+  }
+}
+
+.works {}
+
+.works-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, 750px);
+  row-gap: 30px;
+}
+
+.container {}
+
+.work {
+  position: relative;
+
+  &__image {}
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__text {
+    display: inline-block;
+    background: #222233;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: #222233;
+    border-radius: 8px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+  }
+  &__link:hover {
+    background: #57EFB4;
+    & svg path {
+      fill: #000;
+    }
+  }
+}
+
+.build {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    width: 531px;
+  }
+
+  &__title {
+    padding: 0 0 16px 0;
+  }
+
+  &__text {
+    line-height: 1.7em;
+    color: @color-gray;
+    margin: 0 0 16px 0;
+  }
+
+  &__text:last-child {
+    margin: 0;
+  }
+
+  &__image {}
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.15em;
+  letter-spacing: -0.02em;
+}
+
+.container {}
+
+.say {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 670px;
+  }
+
+  &__wrap {
+    padding: 0 0 700px 0;
+  }
+
+  &__title {}
+
+  &__text {
+    line-height: 1.7em;
+    color: @color-gray;
+  }
+
+  &__items {}
+}
+
+.container {}
+
+.title {}
+
+.item {
+  display: flex;
+  width: 438px;
+  margin: 0 0 59px 0;
+  background: #222233;
+  border-radius: 8px;
+  padding: 20px;
+
+  &__icon {
+    margin: 0 24px 0 0;
+  }
+
+  &__body {}
+
+  &__text {
+    line-height: 1.7em;
+    color: @color-gray;
+    padding: 0 0 24px 0;
+  }
+
+  &__wrap {}
+
+  &__title {
+    font-weight: 600;
+    font-size: @fz-middle;
+    line-height: 1.33em;
+  }
+
+  &__subtitle {}
+}
+
+.item:last-child {
+  margin: 0;
+}
+
+.worked {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 650px 420px;
+    justify-content: space-between;
+  }
+
+  &__title {}
+
+  &__body {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, 200px);
+    column-gap: 32px;
+  }
+
+  &__wrap {}
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2em;
+    padding: 0 0 16px 0;
+  }
+
+  &__text {
+    color: @color-gray;
+  }
+}
+
+.container {}
+
+.title {}
+
+.target {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__image {}
+
+  &__body {
+    width: 530px;
+  }
+
+  &__title {
+    margin: 0 0 16px 0;
+  }
+
+  &__text {
+    line-height: 1.7em;
+    color: @color-gray;
+    margin: 0 0 16px 0;
+  }
+
+  &__text:last-child {
+    margin: 0;
+  }
+}
+
+.container {}
+
+.title {}
+
+.contact {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    width: 530px;
+    // margin: 0 222px 0 0;
+  }
+
+  &__text {
+    line-height: 1.7em;
+    color: @color-gray;
+    padding: 0 0 24px 0;
+  }
+
+  &__button {
+    display: inline-block;
+    background: #006ADA;
+    border-radius: 8px;
+    padding: 14px 24px;
+  }
+  &__link {
+    color: @color-white;
+  }
+
+  &__title {
+    width: 508px;
+  }
+}
+
+.container {}
+
+.title {}
+
+.footer {
+  background: #222233;
+  &__wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    row-gap: 40px;
+    padding: 120px 90px;
+  }
+  &__logo-button {}
+  &__logo-link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: @color-white;
+    font-size: 27px;
+  }
+  &__svg {
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 30px);
+    // margin: 32px 0 0px 0;
+  }
+  &__link {
+
+    color: @color-white;
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__credits {
+    color: @color-gray;
+  }
+}
+.container {
+}
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  justify-content: end;
+}
+.icon {
+  &__link:hover {
+    & svg rect {
+      fill: #57EFB4;
+      border-radius: 50px;
+      +path {
+        fill: #000;
+      }
+    }
+  }
+}
